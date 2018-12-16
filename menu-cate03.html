@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="zh-tw">
+    <head>
+        <title>Elephant Garden 象園咖啡</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <style>
+            body {
+                background-color: #FEDFE1;
+                font-family: 微軟正黑體, Arial;
+            }
+            .container-fluid {
+                background-color: lightblue;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            /* nav */
+            nav {
+                width: 100%;
+                z-index: 5;
+                background-color: rgba(255, 255, 255, .8);
+            }
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+            /* banner */
+            .parallax-window {
+                min-height: 100vh;
+                background: transparent;
+            }
+            /* .banner {
+                height: 100vh;
+                background: url(images/banner.jpg) center center no-repeat;
+                background-size: cover;
+                position: relative;
+            } */
+            .title {
+                position: absolute;
+                width: 350px;
+                height: 350px;
+                background-color: rgba(190, 194, 63, .9);
+                left: calc(50% - 175px);
+                top: calc(50% - 175px);
+            }
+            .title h2, .title h3{
+                color: #ffffff;
+            }
+            .arrow-down {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                left: calc(50% - 25px);
+                top: calc(90% - 25px);
+                transition: .5s;
+            }
+            .arrow-down:hover {
+                transform: translateY(20px);
+            }
+            /* food */
+            .icon-info {
+                margin: 0 15px 0 0;
+            }
+            .icon-info-last {
+                margin: 0;
+            }
+            .food-box {
+                /* border: 1px solid #000; */
+                margin: 30px 0;
+            }
+            .food-box .food-img div img {
+                width: 100px; /* bug */
+                height: 100px;
+                border-radius: 50%;
+                margin: 0 20px 0 0;
+            }
+            .food-box .price-circle {
+                margin: 0 0 0 10px;
+            }
+            .price-circle div {
+                width: 80px; /* bug */
+                height: 80px;
+                border-radius: 50%;
+                background-color: #fff;
+                text-align: center;
+                line-height: 80px;
+                box-shadow: 0 0 5px #000;
+            }
+            /* top */
+            .container .up-circle {
+                margin-bottom: 20px;
+            }
+            .container .up-circle i {
+                font-size: 36px;
+                color: #62592C;
+            }
+            .container .up-circle i:hover {
+                color: #ADA142;
+            }
+            /* section */
+            .section {
+                /* height: 300px; */
+                padding: 20px 0;
+                background: #D7C4BB;
+            }
+            .section img {
+                width: 100px;
+                margin: 20px 0 20px 0;
+            }
+            .section p {
+                font-size: 20px;
+                font-weight: bold;
+            }
+            /* footer */
+            footer {
+                /* height: 50px; */
+                background: #000;
+            }
+            footer .copyright {
+                height: 100%;
+            }
+            footer .copyright img {
+                width: 35px;
+                margin: 15px 5px 15px 5px;
+            }
+            footer .copyright p {
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+
+            .rwd_price-circle {
+                margin-top: -20px;
+                margin-left: 30px;
+                z-index: 100;
+            }
+            .rwd_price-circle {
+                width: 80px; /* bug */
+                height: 80px;
+                border-radius: 50%;
+                background-color: #fff;
+                text-align: center;
+                line-height: 80px;
+                box-shadow: 0 0 5px #000;
+            }
+            @media screen and (max-width: 377px){
+                .rwd_price {
+                    display: block;
+                }
+                .price {
+                    display: none;
+                }
+            }
+            @media screen and (min-width: 376px){
+                .rwd_price {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <!-- nav -->
+            <nav class="navbar navbar-expand-lg navbar-light position-fixed">
+                <a class="navbar-brand" href="index.html">象園咖啡</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="promotions.html">Promotions</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link" href="menu-cate01.html" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">Menu</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="menu-cate01.html">人氣餐點推薦</a>
+                            <a class="dropdown-item" href="menu-cate02.html">經典排餐系列</a>
+                            <a class="dropdown-item" href="menu-cate03.html">象式米飯主義 <span class="sr-only">(current)</span></a>
+                            <a class="dropdown-item" href="menu-cate04.html">經典義大利麵</a>
+                            <a class="dropdown-item" href="menu-cate05.html">象式鬆餅系列</a>
+                            <a class="dropdown-item" href="menu-cate06.html">特選單點飲品</a>
+                        </div>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/elephantgardencafe/" target="_blank">Facebook</a>
+                    </li> -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- banner -->
+        <div class="parallax-window" data-parallax="scroll" data-image-src="images/banner.jpg"></div>
+
+        <div class="container-fluid">
+            <!-- banner -->
+            <div class="banner">
+                <div class="title d-flex flex-column justify-content-center align-items-center" data-aos="zoom-in">
+                    <h2>象式米飯主義</h2>
+                    <h3>Elephant Garden</h3>
+                </div>
+                <div class="arrow-down d-flex flex-column justify-content-center align-items-center">
+                    <img id="down" src="images/down-arrow.svg" alt="" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- food -->
+            <div class="d-flex justify-content-center" style="margin: 40px 0 20px 0">
+                <div class="row" style="background-color: #FCFAF2; padding: 5px 10px 5px 10px; margin-top: 30px;">
+                    <div class="icon-info ">
+                        <img style="width: 25px;" src="images/food-icon/crown.svg"" alt="">
+                        <span>人氣王</span>
+                    </div>
+                    <div class="icon-info">
+                        <img style="width: 25px;" src="images/food-icon/cow.svg"" alt="">
+                        <span>含牛肉</span>
+                    </div>
+                    <div class="icon-info">
+                        <img style="width: 25px;" src="images/food-icon/chili.svg"" alt="">
+                        <span>含辣椒</span>
+                    </div>
+                    <div class="icon-info icon-info-last">
+                        <img style="width: 25px;" src="images/food-icon/leaf.svg"" alt="">
+                        <span>蛋奶素</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- food1 -->
+                <div class="food-box col-md-6 d-flex" data-aos="fade-up">
+                    <div class="food-img d-flex justify-content-center align-items-center">
+                        <div>
+                            <img src="images/food/1.jpg" alt="">
+                            <div class="rwd_price rwd_price-circle" style="color: #113285;">$ 220</div>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li><h5 style="font-weight: bold;"><img style="width: 25px;" src="images/food-icon/crown.svg">&nbsp;日式茄汁豬排麵</h5></li>
+                        <li>Beef burgundy rice</li>
+                        <li style="font-size: 14px;">精選橘紅色蛋黃的勤益視好蛋，水煮去殼後酥炸並淋上由羅望子果實、蒜碎、乾辣椒組成的醬汁其口感鹹、甜帶微酸，滋味令人難忘。</li>
+                    </ul>
+                    <div class="price-circle d-flex justify-content-center align-items-center">
+                        <div class="price" style="color: #113285;">$ 220</div>
+                    </div>
+                </div>
+                <!-- food2 -->
+                <div class="food-box col-md-6 d-flex" data-aos="fade-up">
+                    <div class="food-img d-flex justify-content-center align-items-center">
+                        <div>
+                            <img src="images/food/2.jpg" alt="">
+                            <div class="rwd_price rwd_price-circle" style="color: #113285;">$ 240</div>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li><h5 style="font-weight: bold;"><img style="width: 25px;" src="images/food-icon/crown.svg">&nbsp;經典雙醬鮮蝦寬麵&nbsp;<img style="width: 20px;" src="images/food-icon/chili.svg" alt=""></h5></li>
+                        <li>Beef burgundy rice</li>
+                        <li style="font-size: 14px;">精選橘紅色蛋黃的勤益視好蛋，水煮去殼後酥炸並淋上由羅望子果實、蒜碎、乾辣椒組成的醬汁其口感鹹、甜帶微酸，滋味令人難忘。</li>
+                    </ul>
+                    <div class="price-circle d-flex justify-content-center align-items-center">
+                        <div class="price" style="color: #113285;">$ 240</div>
+                    </div>
+                </div>
+                <!-- food3 -->
+                <div class="food-box col-md-6 d-flex" data-aos="fade-up">
+                    <div class="food-img d-flex justify-content-center align-items-center">
+                        <div>
+                            <img src="images/food/3.jpg" alt="">
+                            <div class="rwd_price rwd_price-circle" style="color: #113285;">$ 230</div>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li><h5 style="font-weight: bold;"><img style="width: 25px;" src="images/food-icon/crown.svg">&nbsp;墨西哥辣醬炸雞寬麵&nbsp;<img style="width: 20px;" src="images/food-icon/chili.svg"><img style="width: 20px;" src="images/food-icon/chili.svg"></h5></li>
+                        <li>Beef burgundy rice</li>
+                        <li style="font-size: 14px;">精選橘紅色蛋黃的勤益視好蛋，水煮去殼後酥炸並淋上由羅望子果實、蒜碎、乾辣椒組成的醬汁其口感鹹、甜帶微酸，滋味令人難忘。</li>
+                    </ul>
+                    <div class="price-circle d-flex justify-content-center align-items-center">
+                        <div class="price" style="color: #113285;">$ 230</div>
+                    </div>
+                </div>
+                <!-- food4 -->
+                <div class="food-box col-md-6 d-flex" data-aos="fade-up">
+                    <div class="food-img d-flex justify-content-center align-items-center">
+                        <div>
+                            <img src="images/food/4.jpg" alt="">
+                            <div class="rwd_price rwd_price-circle" style="color: #113285;">$ 260</div>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li><h5 style="font-weight: bold;"><img style="width: 25px;" src="images/food-icon/crown.svg">&nbsp;香煎干貝虎蝦羅勒海鮮寬麵&nbsp;<img style="width: 20px;" src="images/food-icon/leaf.svg"></h5></li>
+                        <li>Beef burgundy rice</li>
+                        <li style="font-size: 14px;">精選橘紅色蛋黃的勤益視好蛋，水煮去殼後酥炸並淋上由羅望子果實、蒜碎、乾辣椒組成的醬汁其口感鹹、甜帶微酸，滋味令人難忘。</li>
+                    </ul>
+                    <div class="price-circle d-flex justify-content-center align-items-center">
+                        <div class="price" style="color: #113285;">$ 260</div>
+                    </div>
+                </div>
+                <!-- food5 -->
+                <div class="food-box col-md-6 d-flex" data-aos="fade-up">
+                    <div class="food-img d-flex justify-content-center align-items-center">
+                        <div>
+                            <img src="images/food/5.jpg" alt="">
+                            <div class="rwd_price rwd_price-circle" style="color: #113285;">$ 200</div>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li><h5 style="font-weight: bold;"><img style="width: 25px;" src="images/food-icon/crown.svg">&nbsp;炸豬排丼飯</h5></li>
+                        <li>Beef burgundy rice</li>
+                        <li style="font-size: 14px;">精選橘紅色蛋黃的勤益視好蛋，水煮去殼後酥炸並淋上由羅望子果實、蒜碎、乾辣椒組成的醬汁其口感鹹、甜帶微酸，滋味令人難忘。</li>
+                    </ul>
+                    <div class="price-circle d-flex justify-content-center align-items-center">
+                        <div class="price" style="color: #113285;">$ 200</div>
+                    </div>
+                </div>
+                <!-- food6 -->
+                <div class="food-box col-md-6 d-flex" data-aos="fade-up">
+                    <div class="food-img d-flex justify-content-center align-items-center">
+                        <div>
+                            <img src="images/food/0.png" alt="">
+                            <div class="rwd_price rwd_price-circle" style="color: #113285;">$ 240</div>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled">
+                        <li><h5 style="font-weight: bold;"><img style="width: 25px;" src="images/food-icon/crown.svg">&nbsp;法式紅酒牛肉飯&nbsp;<img style="width: 20px;" src="images/food-icon/cow.svg"></h5></li>
+                        <li>Beef burgundy rice</li>
+                        <li style="font-size: 14px;">精選橘紅色蛋黃的勤益視好蛋，水煮去殼後酥炸並淋上由羅望子果實、蒜碎、乾辣椒組成的醬汁其口感鹹、甜帶微酸，滋味令人難忘。</li>
+                    </ul>
+                    <div class="price-circle d-flex justify-content-center align-items-center">
+                        <div class="price" style="color: #113285;">$ 240</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- top -->
+            <div class="up-circle d-flex justify-content-center">
+                <i class="far fa-arrow-alt-circle-up" id="top" data-aos="fade-up"></i>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <!-- section -->
+            <div class="section d-flex flex-column justify-content-center align-items-center">
+                <img src="images/logo.png" alt="" data-aos="fade-up">
+                <p data-aos="fade-up">給你滿滿的幸福飽足感</p>
+                <p data-aos="fade-up">融合多國風味佳餚</p>
+                <p data-aos="fade-up">精心打造舒適放鬆的用餐環境</p>
+            </div>
+
+            <!-- footer -->
+            <footer>
+                <div class="copyright d-flex flex-column justify-content-center align-items-center">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <a href="https://www.facebook.com/elephantgardencafe/" target="_blank"><img src="images/contact-icon/facebook.svg" alt=""></a>
+                        <a href="https://www.instagram.com/explore/tags/%E8%B1%A1%E5%9C%92%E5%92%96%E5%95%A1/?hl=zh-tw" target="_blank"><img src="images/contact-icon/instagram.svg" alt=""></a>
+                        <a href="https://twitter.com/hashtag/%E8%B1%A1%E5%9C%92%E5%92%96%E5%95%A1?src=hash" target="_blank"><img src="images/contact-icon/twitter.svg" alt=""></a>
+                    </div>
+                    <p class="text-white">Copyright © 2018 象園咖啡 All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+        <!-- Plugin -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="js/plugins/parallax.min.js"></script>
+        <script>
+            AOS.init();
+
+            $("#down").click(function(){
+            $('html,body').animate({
+                scrollTop: document.documentElement.clientHeight
+            }, 1400);
+            });
+
+            $("#top").click(function(){
+            $('html,body').animate({
+                    scrollTop: 0
+            }, 700);
+            });
+
+            // 視差捲動效果
+            $('.parallax-window').parallax({imageSrc: 'images/banner.jpg'});
+
+        </script>
+    </body>
+</html>

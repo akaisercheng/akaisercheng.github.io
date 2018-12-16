@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="zh-tw">
+    <head>
+        <title>Elephant Garden 象園咖啡</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <style>
+            body {
+                background-color: #FEDFE1;
+                font-family: 微軟正黑體, Arial;
+            }
+            .container-fluid {
+                background-color: #FEDFE1;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            /* nav */
+            nav {
+                width: 100%;
+                z-index: 5;
+                background-color: rgba(255, 255, 255, .8);
+            }
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+            /* banner */
+            .parallax-window {
+                min-height: 100vh;
+                background: transparent;
+            }
+            /* .banner {
+                height: 100vh;
+                background: url(images/banner.jpg) center center no-repeat;
+                background-size: cover;
+                position: relative;
+            } */
+            .title {
+                position: absolute;
+                width: 350px;
+                height: 350px;
+                background-color: rgba(190, 194, 63, .9);
+                left: calc(50% - 175px);
+                top: calc(50% - 175px);
+            }
+            .title h2, .title h3{
+                color: #ffffff;
+            }
+            .arrow-down {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                left: calc(50% - 25px);
+                top: calc(90% - 25px);
+                transition: .5s;
+            }
+            .arrow-down:hover {
+                transform: translateY(20px);
+            }
+            /* info */
+            .container {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .container .info-box {
+                margin: 50px 0 50px 0;
+                /* border: 1px solid #000; */
+            }
+            .container .info-box .store-photo {
+                width: 65%;
+                background: url(images/restaurant/內湖店/1.jpg) center center no-repeat;
+                background-size: cover;
+            }
+
+            .container .info-box .store-photo2 {
+                width: 65%;
+                background: url(images/restaurant/南港店/1.jpg) center center no-repeat;
+                background-size: cover;
+            }
+            .container .info-box .store-photo3 {
+                width: 65%;
+                background: url(images/restaurant/仁愛店/1.jpg) center center no-repeat;
+                background-size: cover;
+            }
+            .container .info-box .store-info {
+                /* max-width: 400px; */
+                padding: 20px 40px 20px 40px;
+                background-color: #DDD23B;
+            }
+            .container .info-box .store-info2 {
+                /* max-width: 400px; */
+                padding: 20px 40px 20px 40px;
+                background-color: #F9BF45;
+            }
+            .container .info-box .store-info h4, .container .info-box .store-info2 h4 {
+                font-weight: bold;
+            }
+            .container .info-box .store-info p, .container .info-box .store-info2 p {
+                font-size: 14px;
+            }
+            /* top */
+            .container .up-circle {
+                margin-bottom: 20px;
+            }
+            .container .up-circle i {
+                font-size: 36px;
+                color: #62592C;
+            }
+            .container .up-circle i:hover {
+                color: #ADA142;
+            }
+            /* section */
+            .section {
+                /* height: 300px; */
+                padding: 20px 0;
+                background: #D7C4BB;
+            }
+            .section img {
+                width: 100px;
+                margin: 20px 0 20px 0;
+            }
+            .section p {
+                font-size: 20px;
+                font-weight: bold;
+            }
+            /* footer */
+            footer {
+                /* height: 50px; */
+                background: #000;
+            }
+            footer .copyright {
+                height: 100%;
+            }
+            footer .copyright img {
+                width: 35px;
+                margin: 15px 5px 15px 5px;
+            }
+            footer .copyright p {
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+
+            @media screen and (max-width: 376px){
+                .store-photo, .store-photo2, .store-photo3 {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <!-- nav -->
+            <nav class="navbar navbar-expand-lg navbar-light position-fixed">
+                <a class="navbar-brand" href="index.html">象園咖啡</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="about.html">About <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="promotions.html">Promotions</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="menu-cate01.html" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">Menu</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="menu-cate01.html">人氣餐點推薦</a>
+                                <a class="dropdown-item" href="menu-cate02.html">經典排餐系列</a>
+                                <a class="dropdown-item" href="menu-cate03.html">象式米飯主義</a>
+                                <a class="dropdown-item" href="menu-cate04.html">經典義大利麵</a>
+                                <a class="dropdown-item" href="menu-cate05.html">象式鬆餅系列</a>
+                                <a class="dropdown-item" href="menu-cate06.html">特選單點飲品</a>
+                            </div>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="https://www.facebook.com/elephantgardencafe/" target="_blank">Facebook</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- banner -->
+        <div class="parallax-window" data-parallax="scroll" data-image-src="images/banner.jpg"></div>
+
+        <div class="container-fluid">  
+            <!-- banner -->
+            <div class="banner">
+                <div class="title d-flex flex-column justify-content-center align-items-center" data-aos="zoom-in">
+                    <h2>分店資訊</h2>
+                    <h3>Elephant Garden</h3>
+                </div>
+                <div class="arrow-down d-flex flex-column justify-content-center align-items-center">
+                    <img id="down" src="images/down-arrow.svg" alt="" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+                </div>
+            </div>
+
+            <!-- info -->
+            <div class="container">
+                <!-- 內湖店 -->
+                <div class="info-box d-flex flex-wrap" data-aos="fade-up" data-aos-duration="1500">
+                    <!-- 分店照片 -->
+                    <div class="store-photo"></div>
+                    <!-- 分店資訊 -->
+                    <div style="flex: 1;">
+                        <div class="store-info">
+                            <h4>內湖店</h4>
+                            <p><img src="images/contact-icon/phone.png" alt="">&nbsp;&nbsp;<b>電話：</b>02-2792-6080</p>
+                            <p><img src="images/contact-icon/address.png" alt="">&nbsp;&nbsp;<b>地址：</b>台北市內湖區內湖路二段192號</p>
+                            <p><img src="images/contact-icon/car.png" alt="">&nbsp;&nbsp;<b>交通：</b>捷運文湖線 — 文德站二號出口</p>
+                            <p><img src="images/contact-icon/time.png" alt="">&nbsp;&nbsp;<b>營業時間：</b>週一至週日 11:00-21:00</p>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.621376412613!2d121.58349781488043!3d25.080818983950515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac8bc872f215%3A0x7f6e6404a05e9e63!2zMTE05Y-w5YyX5biC5YWn5rmW5Y2A5YWn5rmW6Lev5LqM5q61MTky6Jmf!5e0!3m2!1szh-TW!2stw!4v1537323208929" width="100%" height="175" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- 南港店 -->
+                <div class="info-box d-flex flex-wrap" data-aos="fade-up" data-aos-duration="1500">
+                    <!-- 分店資訊 -->
+                    <div style="flex: 1;">
+                        <div class="store-info2">
+                            <h4>南港店</h4>
+                            <p><img src="images/contact-icon/phone.png" alt="">&nbsp;&nbsp;<b>電話：</b>02-2651-5559</p>
+                            <p><img src="images/contact-icon/address.png" alt="">&nbsp;&nbsp;<b>地址：</b>台北市南港區忠孝東路七段359號3樓</p>
+                            <p><img src="images/contact-icon/car.png" alt="">&nbsp;&nbsp;<b>交通：</b>捷運板南線 — 南港站2A出口</p>
+                            <p><img src="images/contact-icon/time.png" alt="">&nbsp;&nbsp;<b>營業時間：</b>週一至週日 11:00-21:30</p>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4572888038633!2d121.60440381487979!3d25.052485483963608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab5deaaef8fd%3A0xa52537306449ed58!2zMTE15Y-w5YyX5biC5Y2X5riv5Y2A5b-g5a2d5p2x6Lev5LiD5q61MzU56JmfQuajnzPmqJM!5e0!3m2!1szh-TW!2stw!4v1537324832016" width="100%" height="175" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <!-- 分店照片 -->
+                    <div class="store-photo2"></div>
+                </div>
+            
+                <!-- 仁愛店 -->
+                <div class="info-box d-flex flex-wrap" data-aos="fade-up" data-aos-duration="1500">
+                    <!-- 分店照片 -->
+                    <div class="store-photo3"></div>
+                    <!-- 分店資訊 -->
+                    <div style="flex: 1;">
+                        <div class="store-info">
+                            <h4>仁愛店</h4>
+                            <p><img src="images/contact-icon/phone.png" alt="">&nbsp;&nbsp;<b>電話：</b>02-2707-6888</p>
+                            <p><img src="images/contact-icon/address.png" alt="">&nbsp;&nbsp;<b>地址：</b>台北市大安區仁愛路四段112巷9弄5號</p>
+                            <p><img src="images/contact-icon/car.png" alt="">&nbsp;&nbsp;<b>交通：</b>捷運板南線 — 忠孝敦化站六號出口</p>
+                            <p><img src="images/contact-icon/time.png" alt="">&nbsp;&nbsp;<b>營業時間：</b>週一至週日 09:30-20:30</p>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.9187201308278!2d121.5478134148795!3d25.036832283970952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abce46e0fb6f%3A0x6e34f09293863b3d!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5LuB5oSb6Lev5Zub5q61MTEy5be3OeW8hDXomZ8!5e0!3m2!1szh-TW!2stw!4v1537429663162" width="100%" height="175" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <!-- top -->
+                <div class="up-circle d-flex justify-content-center">
+                    <i class="far fa-arrow-alt-circle-up" id="top" data-aos="fade-up"></i>
+                </div>
+            </div>
+
+            <!-- section -->
+            <div class="section d-flex flex-column justify-content-center align-items-center">
+                <img src="images/logo.png" alt="" data-aos="fade-up">
+                <p data-aos="fade-up">給你滿滿的幸福飽足感</p>
+                <p data-aos="fade-up">融合多國風味佳餚</p>
+                <p data-aos="fade-up">精心打造舒適放鬆的用餐環境</p>
+            </div>
+
+            <!-- footer -->
+            <footer>
+                <div class="copyright d-flex flex-column justify-content-center align-items-center">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <a href="https://www.facebook.com/elephantgardencafe/" target="_blank"><img src="images/contact-icon/facebook.svg" alt=""></a>
+                        <a href="https://www.instagram.com/explore/tags/%E8%B1%A1%E5%9C%92%E5%92%96%E5%95%A1/?hl=zh-tw" target="_blank"><img src="images/contact-icon/instagram.svg" alt=""></a>
+                        <a href="https://twitter.com/hashtag/%E8%B1%A1%E5%9C%92%E5%92%96%E5%95%A1?src=hash" target="_blank"><img src="images/contact-icon/twitter.svg" alt=""></a>
+                    </div>
+                    <p class="text-white">Copyright © 2018 象園咖啡 All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+        <!-- Plugin -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="js/plugins/parallax.min.js"></script>
+        <script>
+            AOS.init();
+
+            $("#down").click(function(){
+            $('html,body').animate({
+                scrollTop: document.documentElement.clientHeight
+            }, 1400);
+            });
+
+            $("#top").click(function(){
+            $('html,body').animate({
+                scrollTop: 0
+            }, 700);
+            });
+
+            // 視差捲動效果
+            $('.parallax-window').parallax({imageSrc: 'images/banner.jpg'});
+        </script>
+    </body>
+</html>

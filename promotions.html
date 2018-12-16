@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="zh-tw">
+    <head>
+        <title>Elephant Garden 象園咖啡</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <style>
+            body {
+                background-color: #FEDFE1;
+                font-family: 微軟正黑體, Arial;
+            }
+            .container-fluid {
+                background-color: #FEDFE1;
+                padding-left: 0;
+                padding-right: 0;
+            }
+            /* nav */
+            nav {
+                width: 100%;
+                z-index: 5;
+                background-color: rgba(255, 255, 255, .8);
+            }
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+            /* banner */
+            .parallax-window {
+                min-height: 100vh;
+                background: transparent;
+            }
+            /* .banner {
+                height: 100vh;
+                background: url(images/banner.jpg) center center no-repeat;
+                background-size: cover;
+                position: relative;
+            } */
+            .title {
+                position: absolute;
+                width: 350px;
+                height: 350px;
+                background-color: rgba(190, 194, 63, .9);
+                left: calc(50% - 175px);
+                top: calc(50% - 175px);
+            }
+            .title h2, .title h3{
+                color: #ffffff;
+            }
+            .arrow-down {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                left: calc(50% - 25px);
+                top: calc(90% - 25px);
+                transition: .5s;
+            }
+            .arrow-down:hover {
+                transform: translateY(20px);
+            }
+            /* promotions */
+            .container {
+                /* height: 300px; */
+                background: #FEDFE1;
+            }
+
+            .promotions-box {
+                margin-top: 40px;
+            }
+
+            .container .card {
+                height: 450px;
+                width: calc(100% / 3 - 40px);
+                background: #fff;
+                margin: 20px;
+            }
+            .container .card:hover {
+                box-shadow: 0 0 5px blue;
+            }
+            /* .container .card:hover .act-cover {
+                transform: scale(1.5);
+            } */
+            .container .card .act-cover {
+                width: 100%;
+                /* height: 180px; */
+            }
+            .container .card .act-content {
+                padding: 10px;
+            }
+            @media screen and (max-width: 992px){
+                .container .card {
+                    height: 450px;
+                    width: calc(100% / 2 - 40px);
+                    background: #fff;
+                    margin: 20px;
+                }
+            }
+            @media screen and (max-width: 768px){
+                .container .card {
+                    height: 450px;
+                    width: calc(100% / 1 - 40px);
+                    background: #fff;
+                    margin: 20px;
+                }
+            }
+            /* top */
+            .container .up-circle {
+                margin-bottom: 20px;
+            }
+            .container .up-circle i {
+                font-size: 36px;
+                color: #62592C;
+            }
+            .container .up-circle i:hover {
+                color: #ADA142;
+            }
+            /* section */
+            .section {
+                /* height: 300px; */
+                padding: 20px 0;
+                background: #D7C4BB;
+            }
+            .section img {
+                width: 100px;
+                margin: 20px 0 20px 0;
+            }
+            .section p {
+                font-size: 20px;
+                font-weight: bold;
+            }
+            /* footer */
+            footer {
+                /* height: 50px; */
+                background: #000;
+            }
+            footer .copyright {
+                height: 100%;
+            }
+            footer .copyright img {
+                width: 35px;
+                margin: 15px 5px 15px 5px;
+            }
+            footer .copyright p {
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <!-- nav -->
+            <nav class="navbar navbar-expand-lg navbar-light position-fixed">
+                <a class="navbar-brand" href="index.html">象園咖啡</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="promotions.html">Promotions <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="menu-cate01.html" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">Menu</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="menu-cate01.html">人氣餐點推薦</a>
+                            <a class="dropdown-item" href="menu-cate02.html">經典排餐系列</a>
+                            <a class="dropdown-item" href="menu-cate03.html">象式米飯主義</a>
+                            <a class="dropdown-item" href="menu-cate04.html">經典義大利麵</a>
+                            <a class="dropdown-item" href="menu-cate05.html">象式鬆餅系列</a>
+                            <a class="dropdown-item" href="menu-cate06.html">特選單點飲品</a>
+                        </div>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/elephantgardencafe/" target="_blank">Facebook</a>
+                    </li> -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- banner -->
+        <div class="parallax-window" data-parallax="scroll" data-image-src="images/banner.jpg"></div>
+
+        <div class="container-fluid">
+            <!-- banner -->
+            <div class="banner">
+                <div class="title d-flex flex-column justify-content-center align-items-center" data-aos="zoom-in">
+                    <h2>優惠活動</h2>
+                    <h3>Elephant Garden</h3>
+                </div>
+                <div class="arrow-down d-flex flex-column justify-content-center align-items-center">
+                    <img id="down" src="images/down-arrow.svg" alt="" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+                </div>
+            </div>
+
+            <!-- promotions -->
+            <div class="promotions-box container d-flex flex-wrap">
+                <!-- promotions-card -->
+                
+                <div class="card js-tilt" data-tilt-maxglare=".5" data-tilt-glare="true" data-aos="fade-up">
+                    <figure class="promotions">
+                        <img class="act-cover" src="images/activity/activity-1.jpg" alt="">
+                    </figure>
+                    <div class="act-content">
+                        <h4>😊生日送小象鬆餅活動</h4>
+                        <p>於生日的前後7天內來店內用餐，即贈送小象鬆餅🐘🐘🐘小象樂園一份。</p>
+                    </div>
+                </div>
+
+                <!-- promotions-card -->
+                <div class="card" data-aos="fade-up">
+                    <figure class="promotions">
+                        <img class="act-cover" src="images/activity/activity-2.jpg" alt="">
+                    </figure>
+                    <div class="act-content">
+                        <h4>😊學生超優惠78折活動</h4>
+                        <p>開學季EG Cafe陪你一起迎接新學期！學生們👩‍🎓👨‍🎓來店內用餐消費出示學生證或註冊單即享🎈9月份至10月5日🎈平日17:30後晚餐78折優惠(不得與其他優惠並用，限餐廳內用消費，例假日除外）</p>
+                    </div>
+                </div>
+
+                <!-- promotions-card -->
+                <div class="card" data-aos="fade-up">
+                    <figure class="promotions">
+                        <img class="act-cover" src="images/activity/activity-3.jpg" alt="">
+                    </figure>
+                    <div class="act-content">
+                        <h4>😊海鮮拼盤送生啤活動</h4>
+                        <p>炎炎夏日，新品海鮮炸物拼盤出爐了喔😊 🈵️🈵️的seafood拼盤配上清爽的生啤酒🍻🍻 點海鮮拼盤送1杯海尼根新鮮生啤!!! 夏天就是要大口吃大口喝🍺🍺 感恩seafood讚嘆seafood!!!</p>
+                    </div>
+                </div>
+
+                <!-- promotions-card -->
+                <div class="card" data-aos="fade-up">
+                    <figure class="promotions">
+                        <img class="act-cover" src="images/activity/activity-4.jpg" alt="">
+                    </figure>
+                    <div class="act-content">
+                        <h4>😊百香果十勝奶霜小象鬆餅開賣</h4>
+                        <p>北海道十勝鮮奶油做出來的奶霜，就像北海道的粉雪❄️融化在手心裡般細緻，搭上自制的百香果慕斯，優雅的香氣，濕潤質地，柔軟輕盈的口感，酸與甜在口中融合！哇屋！！口水流不停啊🤤🤤</p>
+                    </div>
+                </div>
+                
+                <!-- promotions-card -->
+                <div class="card" data-aos="fade-up">
+                    <figure class="promotions">
+                        <img class="act-cover" src="images/activity/activity-5.jpg" alt="">
+                    </figure>
+                    <div class="act-content">
+                        <h4>😊與毛小孩用餐招待專屬小點心</h4>
+                        <p>🌤美好的休閒時光🍳就從象園的早午餐開始吧!令人嚮往的美味時刻☀活力能量滿分!</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- top -->
+            <div class="container">
+                <div class="up-circle d-flex justify-content-center">
+                    <i class="far fa-arrow-alt-circle-up" id="top" data-aos="fade-up"></i>
+                </div>
+            </div>
+            
+            <!-- section -->
+            <div class="section d-flex flex-column justify-content-center align-items-center">
+                <img src="images/logo.png" alt="" data-aos="fade-up">
+                <p data-aos="fade-up">給你滿滿的幸福飽足感</p>
+                <p data-aos="fade-up">融合多國風味佳餚</p>
+                <p data-aos="fade-up">精心打造舒適放鬆的用餐環境</p>
+            </div>
+    
+            <!-- footer -->
+            <footer>
+                <div class="copyright d-flex flex-column justify-content-center align-items-center">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <a href="https://www.facebook.com/elephantgardencafe/" target="_blank"><img src="images/contact-icon/facebook.svg" alt=""></a>
+                        <a href="https://www.instagram.com/explore/tags/%E8%B1%A1%E5%9C%92%E5%92%96%E5%95%A1/?hl=zh-tw" target="_blank"><img src="images/contact-icon/instagram.svg" alt=""></a>
+                        <a href="https://twitter.com/hashtag/%E8%B1%A1%E5%9C%92%E5%92%96%E5%95%A1?src=hash" target="_blank"><img src="images/contact-icon/twitter.svg" alt=""></a>
+                    </div>
+                    <p class="text-white">Copyright © 2018 象園咖啡 All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+        <!-- Plugin -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="js/plugins/parallax.min.js"></script>
+        <script src="js/plugins/tilt.jquery.min.js"></script>
+        <script>
+            AOS.init();
+
+            $("#down").click(function(){
+            $('html,body').animate({
+                scrollTop: document.documentElement.clientHeight
+            }, 1400);
+            });
+
+            $("#top").click(function(){
+            $('html,body').animate({
+                scrollTop: 0
+            }, 700);
+            });
+
+            // $('.js-tilt').tilt();
+
+            // 視差捲動效果
+            $('.parallax-window').parallax({imageSrc: 'images/banner.jpg'});
+            
+        </script>
+    </body>
+</html>
